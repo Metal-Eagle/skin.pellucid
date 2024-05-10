@@ -21,22 +21,32 @@
 						<width>23-col</width>
 						<height>69</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="0">colors/black.png</texture>
-						<colordiffuse>overlay</colordiffuse>
+						<texture border="0">masks/tvChannel.png</texture>
+						<colordiffuse>d0000000</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<posy>3</posy>
-						<width>66</width>
-						<height>66</height>
-						<aspectratio>keep</aspectratio>
-						<texture fallback="colors/black.png" diffuse="masks/circle.png" border="0">$INFO[Listitem.thumb]</texture>
-						<colordiffuse>overlay</colordiffuse>
+						<posy>0</posy>
+						<width>69</width>
+						<height>69</height>
+						<aspectratio>stretch</aspectratio>
+						<texture diffuse="masks/iconEndCapLeft.png" border="0">colors/black.png</texture>
+						<colordiffuse>d0000000</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>69</width>
+						<height>69</height>
+						<aspectratio>scale</aspectratio>
+						<texture diffuse="masks/iconEndCapLeft.png">$INFO[listitem.thumb]</texture>
+                        <bordersize>6</bordersize>
+						<colordiffuse></colordiffuse>
 					</control>
 					<control type="label">
-						<posx>1-col-indent</posx>
+						<posx>96</posx>
 						<posy>0</posy>
-						<width>288</width>
+						<width>276</width>
 						<height>2-row</height>
 						<aligny>center</aligny>
 						<font>itemTitle</font>
@@ -58,7 +68,7 @@
 					<control type="label">
 						<posx>520</posx>
 						<posy>0</posy>
-						<width>7-col-gutter</width>
+						<width>444</width>
 						<height>2-row</height>
 						<aligny>center</aligny>
 						<font>itemTitle</font>
@@ -95,27 +105,39 @@
 						<posx>1-col</posx>
 						<posy>0</posy>
 						<width>23-col</width>
-						<height>2-row</height>
+						<height>71</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="0">colors/white.png</texture>
+						<texture border="0">masks/tvChannel.png</texture>
 						<colordiffuse>highlight</colordiffuse>
 					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>3</posy>
-						<width>66</width>
-						<height>66</height>
-						<aspectratio>keep</aspectratio>
-						<texture fallback="colors/black.png" diffuse="masks/circle.png" border="0">$INFO[Listitem.thumb]</texture>
+                    <control type="group">
 						<animation type="focus" loop="false" reversible="false">
 							<effect type="fade" time="500"/>
 							<effect type="rotatey" end="360" center="33" tween="back" easing="out" time="1000"/>
 						</animation>
-					</control>
+    					<control type="image">
+    						<posx>0</posx>
+    						<posy>0</posy>
+    						<width>69</width>
+    						<height>69</height>
+    						<aspectratio>stretch</aspectratio>
+    						<texture diffuse="masks/iconEndCapLeft.png" border="0">colors/white.png</texture>
+                            <colordiffuse>highlight</colordiffuse>
+    					</control>
+    					<control type="image">
+    						<posx>0</posx>
+    						<posy>0</posy>
+    						<width>69</width>
+    						<height>69</height>
+    						<aspectratio>scale</aspectratio>
+    						<texture diffuse="masks/iconEndCapLeft.png">$INFO[listitem.thumb]</texture>
+                            <bordersize>6</bordersize>
+    					</control>
+                    </control>
 					<control type="label">
-						<posx>1-col-indent</posx>
+						<posx>96</posx>
 						<posy>0</posy>
-						<width>288</width>
+						<width>276</width>
 						<height>2-row</height>
 						<aligny>center</aligny>
 						<font>itemTitle</font>
@@ -137,7 +159,7 @@
 					<control type="label">
 						<posx>520</posx>
 						<posy>0</posy>
-						<width>7-col-gutter</width>
+						<width>444</width>
 						<height>2-row</height>
 						<aligny>center</aligny>
 						<font>itemTitle</font>

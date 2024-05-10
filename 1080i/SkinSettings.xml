@@ -14,7 +14,7 @@
                 <posy>-12</posy>
                 <width>1320</width>
                 <height>720</height>
-                <texture>colors/black.png</texture>
+                <texture border="24">dialogBackground.png</texture>
                 <colordiffuse>overlay</colordiffuse>
                 <aspectratio>stretch</aspectratio>
             </control>
@@ -23,7 +23,7 @@
                 <posy>0</posy>
                 <width>18-col</width>
                 <height>2-row</height>
-                <texture>colors/white.png</texture>
+                <texture border="10">masks/menuTitle2.png</texture>
                 <colordiffuse>highlight</colordiffuse>
                 <aspectratio>stretch</aspectratio>
             </control>
@@ -87,9 +87,6 @@
                         <item id="1">
                             <label>$LOCALIZE[128]</label>
                         </item>
-                        <item id="2">
-                            <label>$LOCALIZE[31170]</label>
-                        </item>
                         <item id="3">
                             <label>$LOCALIZE[31044]</label>
                         </item>
@@ -97,15 +94,6 @@
                 </control>
             </control>
             <!--options-->
-            <control type="image">
-                <posx>4-col</posx>
-                <posy>2-row</posy>
-                <width>14-col</width>
-                <height>624</height>
-                <texture>colors/black.png</texture>
-                <colordiffuse>overlay</colordiffuse>
-                <aspectratio>stretch</aspectratio>
-            </control>
             <control type="grouplist" id="200">
                 <posx>4-col</posx>
                 <posy>84</posy>
@@ -119,25 +107,38 @@
                     <description>Stop video on return to menu</description>
                     <width>14-col</width>
                     <label>31138</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(stopVideoOnMenu)</onclick>
                     <selected>Skin.HasSetting(stopVideoOnMenu)</selected>
+                    <font>buttonTitle</font>
                 </control>
                 <control type="button" id="2">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Set home background image directory</description>
                     <width>14-col</width>
+                    <align>left</align>
+                    <textoffsetx>24</textoffsetx>
                     <label>31116</label>
                     <label2>$INFO[Skin.String(homeBackground)]</label2>
                     <onclick>Skin.SetPath(homeBackground)</onclick>
                     <textwidth>8-col</textwidth>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
+                    <font>buttonTitle</font>
                 </control>
                 <control type="button" id="3">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Reset home background image directory</description>
                     <width>14-col</width>
+                    <align>left</align>
+                    <textoffsetx>24</textoffsetx>
                     <label>31122</label>
                     <onclick>Skin.Reset(homeBackground)</onclick>
                     <textwidth>8-col</textwidth>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
+                    <font>buttonTitle</font>
                 </control>
 
                 <control type="radiobutton" id="1">
@@ -145,73 +146,102 @@
                     <description>Reverse power down options</description>
                     <width>14-col</width>
                     <label>31142</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(exitFirst)</onclick>
                     <selected>Skin.HasSetting(exitFirst)</selected>
+                    <font>buttonTitle</font>
                 </control>
                 <control type="radiobutton" id="7">
                     <visible>Container(8000).Hasfocus(3)</visible>
                     <description>Enable Debug Grid</description>
                     <width>14-col</width>
                     <label>31034</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(DebugGrid)</onclick>
                     <selected>Skin.HasSetting(DebugGrid)</selected>
+                    <font>buttonTitle</font>
                 </control>
                 <control type="radiobutton" id="8">
                     <visible>Container(8000).Hasfocus(3)</visible>
                     <description>Disable Debug Info</description>
                     <width>14-col</width>
                     <label>31035</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
                     <selected>Skin.HasSetting(DebugInfo)</selected>
+                    <font>buttonTitle</font>
                 </control>
                 <control type="button" id="9">
                     <visible>Container(8000).Hasfocus(3)</visible>
                     <description>Reload skin</description>
                     <width>14-col</width>
+                    <align>left</align>
+                    <textoffsetx>24</textoffsetx>
                     <label>31043</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>ReloadSkin()</onclick>
                     <onclick>activateWindow(home)</onclick>
+                    <font>buttonTitle</font>
                 </control>
                 <control type="radiobutton" id="10">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Disable fanart animation effect</description>
                     <width>14-col</width>
                     <label>31102</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(lowPowerMode)</onclick>
                     <onclick>ReloadSkin()</onclick>
                     <selected>Skin.HasSetting(lowPowerMode)</selected>
+                    <font>buttonTitle</font>
                 </control>
                 <control type="radiobutton" id="17">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Extended Fanart</description>
                     <width>14-col</width>
                     <label>31220</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(disableExtendedFanart)</onclick>
                     <selected>Skin.HasSetting(disableExtendedFanart)</selected>
+                    <font>buttonTitle</font>
                 </control>
 				<control type="radiobutton" id="18">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Disable recently added Movies</description>
                     <width>14-col</width>
                     <label>31238</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(disableRecentMovies)</onclick>
                     <selected>Skin.HasSetting(disableRecentMovies)</selected>
+                    <font>buttonTitle</font>
                 </control>
 				<control type="radiobutton" id="19">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Disable recently added TVShows</description>
                     <width>14-col</width>
                     <label>31239</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(disableRecentTVShows)</onclick>
                     <selected>Skin.HasSetting(disableRecentTVShows)</selected>
+                    <font>buttonTitle</font>
                 </control>
 				<control type="radiobutton" id="20">
                     <visible>Container(8000).Hasfocus(1)</visible>
                     <description>Disable recently added Albums</description>
                     <width>14-col</width>
                     <label>31240</label>
+                    <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                    <texturenofocus></texturenofocus>
                     <onclick>Skin.ToggleSetting(disableRecentAlbums)</onclick>
                     <selected>Skin.HasSetting(disableRecentAlbums)</selected>
+                    <font>buttonTitle</font>
                 </control>
             </control>
         </control>

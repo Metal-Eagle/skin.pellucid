@@ -22,7 +22,7 @@
 					<visible>!Visualisation.Enabled</visible>
 	                <include>dimensionsFullscreen</include>
 	                <aspectratio>stretch</aspectratio>
-	                <texture>$INFO[listitem.art(fanart)]</texture>
+	                <texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 	                <fadetime>500</fadetime>
 	                <colordiffuse>77ffffff</colordiffuse>
 	            </control>
@@ -63,9 +63,7 @@
 					<width>7-col</width>
 					<height>7-col</height>
 	                <aspectratio scalediffuse="false">stretch</aspectratio>
-	                <texture fallback="noAlbumCover.jpg">$INFO[MusicPlayer.Cover]</texture>
-                    <bordertexture colordiffuse="overlay">colors/black.png</bordertexture>
-                    <bordersize>6</bordersize>
+	                <texture diffuse="masks/fullScreenAlbumArt.png" fallback="noAlbumCover.jpg">$INFO[MusicPlayer.Cover]</texture>
                     <colordiffuse>ffffffff</colordiffuse>
 	            </control>
 				<!--track info-->
@@ -95,6 +93,19 @@
 						<textcolor>textActive</textcolor>
 						<scroll>true</scroll>
 						<label>[B]$INFO[MusicPlayer.artist][/B][CR]$INFO[MusicPlayer.Album,, ]$INFO[MusicPlayer.year,(,)]</label>
+						<shadowcolor>99000000</shadowcolor>
+					</control>
+					<control type="label">
+                        <visible>Pvr.IsPlayingRadio</visible>
+						<posx>4-col</posx>
+						<posy>112</posy>
+						<width>16-col</width>
+						<height>3-row</height>
+						<align>center</align>
+						<font>buttonTitle</font>
+						<textcolor>textActive</textcolor>
+						<scroll>true</scroll>
+						<label>[B]$INFO[MusicPlayer.channelname][/B]</label>
 						<shadowcolor>99000000</shadowcolor>
 					</control>
 					<control type="progress">

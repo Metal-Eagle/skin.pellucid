@@ -27,7 +27,7 @@
                 <posy>-12</posy>
                 <width>1320</width>
                 <height>720</height>
-                <texture>colors/black.png</texture>
+                <texture border="24">dialogBackground.png</texture>
                 <colordiffuse>overlay</colordiffuse>
                 <aspectratio>stretch</aspectratio>
             </control>
@@ -36,7 +36,7 @@
                 <posy>0</posy>
                 <width>18-col</width>
                 <height>2-row</height>
-                <texture>colors/white.png</texture>
+                <texture border="10">masks/menuTitle2.png</texture>
                 <colordiffuse>highlight</colordiffuse>
                 <aspectratio>stretch</aspectratio>
             </control>
@@ -56,7 +56,10 @@
                 <posx>0</posx>
                 <posy>624</posy>
                 <font>smallStrong</font>
-                <texturenofocus colordiffuse="11FFFFFF">colors/black.png</texturenofocus>
+                <align>left</align>
+                <textoffsetx>12</textoffsetx>
+                <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                <texturenofocus></texturenofocus>
                 <label>[B][COLOR highlight]$LOCALIZE[21417]:[/COLOR][/B] $INFO[control.getlabel(20)]</label>
                 <onclick>SettingsLevelChange</onclick>
                 <onup>3</onup>
@@ -92,8 +95,11 @@
                 <itemgap>0</itemgap>
             </control>
             <control type="button" id="7">
-                <description>Default Button</description>
                 <texturenofocus></texturenofocus>
+                <texturefocus colordiffuse="ffffffff">colors/white.png</texturefocus>
+                <align>left</align>
+                <textoffsetx>24</textoffsetx>
+                <font>buttonTitle</font>
             </control>
             <control type="label" id="14">
                 <description>Default Label</description>
@@ -109,10 +115,13 @@
             <control type="radiobutton" id="8">
                 <description>Default Radio Button</description>
                 <texturenofocus></texturenofocus>
+                <texturefocus>colors/white.png</texturefocus>
+                <font>buttonTitle</font>
             </control>
             <control type="spincontrolex" id="9">
                 <description>Default Spin Control</description>
                 <texturenofocus></texturenofocus>
+                <font>buttonTitle</font>
             </control>
             <control type="sliderex" id="13">
                 <description>Default Slider</description>
@@ -125,6 +134,8 @@
                 <font>buttonTitle</font>
                 <texturefocus>colors/white.png</texturefocus>
                 <texturenofocus></texturenofocus>
+                <alttexturefocus>colors/white.png</alttexturefocus>
+                <align>left</align>
             </control>
             <control type="button" id="20">
                 <visible>false</visible>
