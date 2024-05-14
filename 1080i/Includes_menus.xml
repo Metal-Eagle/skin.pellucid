@@ -17,108 +17,52 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
+
 		<item id="2">
 			<property name="id">$NUMBER[2]</property>
-			<label>$LOCALIZE[31221]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">31221</property>
-			<property name="defaultID">31221</property>
-			<visible>System.HasMediaDVD</visible>
-			<onclick>XBMC.PlayDVD()</onclick>
-			<property name="path">XBMC.PlayDVD()</property>
-			<property name="list">XBMC.PlayDVD()</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">num-31221</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="3">
-			<property name="id">$NUMBER[3]</property>
-			<label>$LOCALIZE[31251]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">31251</property>
-			<property name="defaultID">31251</property>
-			<visible>System.HasMediaDVD</visible>
-			<onclick>EjectTray()</onclick>
-			<property name="path">EjectTray()</property>
-			<property name="list">EjectTray()</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">num-31251</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="4">
-			<property name="id">$NUMBER[4]</property>
-			<label>$LOCALIZE[31249]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">31249</property>
-			<property name="defaultID">31249</property>
-			<visible>[System.HasPVRAddon] + [PVR.HasTVChannels]</visible>
-			<onclick>ActivateWindow(TVChannels)</onclick>
-			<property name="path">ActivateWindow(TVChannels)</property>
-			<property name="list">TVChannels</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">num-31249</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="5">
-			<property name="id">$NUMBER[5]</property>
-			<label>$LOCALIZE[31250]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">31250</property>
-			<property name="defaultID">31250</property>
-			<visible>[System.HasPVRAddon] + [PVR.HasRadioChannels]</visible>
-			<onclick>ActivateWindow(Radiochannels)</onclick>
-			<property name="path">ActivateWindow(Radiochannels)</property>
-			<property name="list">Radiochannels</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">num-31250</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
-			<label>$LOCALIZE[342]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">movies</property>
-			<property name="defaultID">movies</property>
-			<visible>[Library.HasContent(Movies)] + [Library.HasContent(Movies)]</visible>
-			<onclick condition="!Skin.HasSetting(disableRecentMovies)">ActivateWindow(Videos,videodb://movies/titles/)</onclick>
-			<property name="path">ActivateWindow(Videos,videodb://movies/titles/)</property>
-			<property name="list">videodb://movies/titles/</property>
-			<onclick condition="!Skin.HasSetting(disableRecentMovies)">control.setfocus(9103,0,absolute)</onclick>
-			<onclick condition="Skin.HasSetting(disableRecentMovies)">ActivateWindow(Videos,videodb://movies/titles/)</onclick>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">movies</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">True</property>
-		</item>
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[20343]</label>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
 			<visible>[Library.HasContent(TVShows)] + [Library.HasContent(TVshows)]</visible>
-			<onclick condition="!Skin.HasSetting(disableRecentTVShows)">ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
+			<onclick condition="!Skin.HasSetting(disableRecentTVShows)">
+				ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://tvshows/titles/)</property>
 			<property name="list">videodb://tvshows/titles/</property>
-			<onclick condition="!Skin.HasSetting(disableRecentTVShows)">control.setfocus(9203,0,absolute)</onclick>
-			<onclick condition="Skin.HasSetting(disableRecentTVShows)">ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
+			<onclick condition="!Skin.HasSetting(disableRecentTVShows)">
+				control.setfocus(9203,0,absolute)</onclick>
+			<onclick condition="Skin.HasSetting(disableRecentTVShows)">
+				ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">tvshows</property>
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="8">
-			<property name="id">$NUMBER[8]</property>
+
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>$LOCALIZE[342]</label>
+			<icon>DefaultAddon.png</icon>
+			<thumb />
+			<property name="labelID">movies</property>
+			<property name="defaultID">movies</property>
+			<visible>[Library.HasContent(Movies)] + [Library.HasContent(Movies)]</visible>
+			<onclick condition="!Skin.HasSetting(disableRecentMovies)">
+				ActivateWindow(Videos,videodb://movies/titles/)</onclick>
+			<property name="path">ActivateWindow(Videos,videodb://movies/titles/)</property>
+			<property name="list">videodb://movies/titles/</property>
+			<onclick condition="!Skin.HasSetting(disableRecentMovies)">
+				control.setfocus(9103,0,absolute)</onclick>
+			<onclick condition="Skin.HasSetting(disableRecentMovies)">
+				ActivateWindow(Videos,videodb://movies/titles/)</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">movies</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
 			<label>$LOCALIZE[3]</label>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
@@ -133,102 +77,27 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="9">
-			<property name="id">$NUMBER[9]</property>
-			<label>$LOCALIZE[2]</label>
+		<!-- Start Youtube -->
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>Youtube</label>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
-			<property name="labelID">2</property>
-			<property name="defaultID">2</property>
-			<property name="icon">DefaultAddon.png</property>
-			<visible>[Library.HasContent(Music)] + [Library.HasContent(Music)]</visible>
-			<onclick condition="!Skin.HasSetting(disableRecentAlbums)">ActivateWindow(Music,musicdb://albums/)</onclick>
-			<property name="path">ActivateWindow(Music,musicdb://albums/)</property>
-			<property name="list">musicdb://albums/</property>
-			<onclick condition="!Skin.HasSetting(disableRecentAlbums)">control.setfocus(9998,0,absolute)</onclick>
-			<onclick condition="Skin.HasSetting(disableRecentAlbums)">ActivateWindow(Music,musicdb://albums/)</onclick>
+			<property name="labelID">Youtube</property>
+			<property name="defaultID">Youtube</property>
+			<onclick>StartAndroidActivity("com.google.android.youtube.tv")</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">num-2</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="10">
-			<property name="id">$NUMBER[10]</property>
-			<label>$LOCALIZE[2]</label>
+		<!-- Turn on screensaver -->
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>Black</label>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
-			<property name="labelID">2--0</property>
-			<property name="defaultID">2--0</property>
-			<visible>!Library.HasContent(Music)</visible>
-			<onclick>ActivateWindow(Music,Files)</onclick>
-			<property name="path">ActivateWindow(Music,Files)</property>
-			<property name="list">Files</property>
+			<property name="labelID">Black</property>
+			<property name="defaultID">Black</property>
+			<onclick>ActivateWindow(screensaver)</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">2-0</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="11">
-			<property name="id">$NUMBER[11]</property>
-			<label>$LOCALIZE[31229]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">31229</property>
-			<property name="defaultID">31229</property>
-			<visible>Library.HasContent(Music)</visible>
-			<onclick>PlayerControl(Partymode(music))</onclick>
-			<property name="path">PlayerControl(Partymode(music))</property>
-			<property name="list">PlayerControl(Partymode(music))</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">num-31229</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="12">
-			<property name="id">$NUMBER[12]</property>
-			<label>$LOCALIZE[31232]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">31232</property>
-			<property name="defaultID">31232</property>
-			<onclick>ActivateWindow(games)</onclick>
-			<property name="path">ActivateWindow(games)</property>
-			<property name="list">games</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">num-31232</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="13">
-			<property name="id">$NUMBER[13]</property>
-			<label>$LOCALIZE[12600]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">weather</property>
-			<property name="defaultID">weather</property>
-			<visible>!String.IsEmpty(Weather.Plugin)</visible>
-			<onclick>ActivateWindow(Weather)</onclick>
-			<property name="path">ActivateWindow(Weather)</property>
-			<property name="list">Weather</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">weather</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">False</property>
-		</item>
-		<item id="14">
-			<property name="id">$NUMBER[14]</property>
-			<label>$LOCALIZE[10002]</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">pictures</property>
-			<property name="defaultID">pictures</property>
-			<onclick>ActivateWindow(Pictures)</onclick>
-			<property name="path">ActivateWindow(Pictures)</property>
-			<property name="list">Pictures</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="submenuVisibility">pictures</property>
-			<property name="group">mainmenu</property>
-			<property name="hasSubmenu">True</property>
 		</item>
 	</include>
 	<include name="menus-videomenu">
@@ -310,16 +179,24 @@
 			<property name="defaultID">movies</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick condition="true">control.setfocus(9999)</onclick>
-			<onclick condition="!window.isactive(videos) + !Skin.HasSetting(disableRecentMovies)">ActivateWindow(Videos,videodb://movies/titles/)</onclick>
+			<onclick condition="!window.isactive(videos) + !Skin.HasSetting(disableRecentMovies)">
+				ActivateWindow(Videos,videodb://movies/titles/)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://movies/titles/)</property>
 			<property name="list">videodb://movies/titles/</property>
-			<onclick condition="!window.isactive(videos) + !Skin.HasSetting(disableRecentMovies)">control.setfocus(9103,0,absolute)</onclick>
-			<onclick condition="window.isactive(videos) + !Skin.HasSetting(disableRecentMovies)">Container.Update(videodb://movies/titles/)</onclick>
-			<onclick condition="window.isactive(videos) + !Skin.HasSetting(disableRecentMovies)">control.setfocus(9103,0,absolute)</onclick>
-			<onclick condition="!window.isactive(videos) + Skin.HasSetting(disableRecentMovies)">ActivateWindow(Videos,videodb://movies/titles/)</onclick>
-			<onclick condition="!window.isactive(videos) + Skin.HasSetting(disableRecentMovies)">control.setfocus(9104,0,absolute)</onclick>
-			<onclick condition="window.isactive(videos) + Skin.HasSetting(disableRecentMovies)">Container.Update(videodb://movies/titles/)</onclick>
-			<onclick condition="window.isactive(videos) + Skin.HasSetting(disableRecentMovies)">control.setfocus(9104,0,absolute)</onclick>
+			<onclick condition="!window.isactive(videos) + !Skin.HasSetting(disableRecentMovies)">
+				control.setfocus(9103,0,absolute)</onclick>
+			<onclick condition="window.isactive(videos) + !Skin.HasSetting(disableRecentMovies)">
+				Container.Update(videodb://movies/titles/)</onclick>
+			<onclick condition="window.isactive(videos) + !Skin.HasSetting(disableRecentMovies)">
+				control.setfocus(9103,0,absolute)</onclick>
+			<onclick condition="!window.isactive(videos) + Skin.HasSetting(disableRecentMovies)">
+				ActivateWindow(Videos,videodb://movies/titles/)</onclick>
+			<onclick condition="!window.isactive(videos) + Skin.HasSetting(disableRecentMovies)">
+				control.setfocus(9104,0,absolute)</onclick>
+			<onclick condition="window.isactive(videos) + Skin.HasSetting(disableRecentMovies)">
+				Container.Update(videodb://movies/titles/)</onclick>
+			<onclick condition="window.isactive(videos) + Skin.HasSetting(disableRecentMovies)">
+				control.setfocus(9104,0,absolute)</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">videosubmenu</property>
 			<property name="isSubmenu">True</property>
@@ -334,16 +211,24 @@
 			<property name="defaultID">tvshows</property>
 			<visible>Library.HasContent(TVShows)</visible>
 			<onclick condition="true">control.setfocus(9999)</onclick>
-			<onclick condition="!window.isactive(videos) + !Skin.HasSetting(disableRecentTVShows)">ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
+			<onclick condition="!window.isactive(videos) + !Skin.HasSetting(disableRecentTVShows)">
+				ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
 			<property name="path">ActivateWindow(Videos,videodb://tvshows/titles/)</property>
 			<property name="list">videodb://tvshows/titles/</property>
-			<onclick condition="!window.isactive(videos) + !Skin.HasSetting(disableRecentTVShows)">control.setfocus(9203,0,absolute)</onclick>
-			<onclick condition="window.isactive(videos) + !Skin.HasSetting(disableRecentTVShows)">Container.Update(videodb://tvshows/titles/)</onclick>
-			<onclick condition="window.isactive(videos) + !Skin.HasSetting(disableRecentTVShows)">control.setfocus(9203,0,absolute)</onclick>
-			<onclick condition="!window.isactive(videos) + Skin.HasSetting(disableRecentTVShows)">ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
-			<onclick condition="!window.isactive(videos) + Skin.HasSetting(disableRecentTVShows)">control.setfocus(9204,0,absolute)</onclick>
-			<onclick condition="window.isactive(videos) + Skin.HasSetting(disableRecentTVShows)">Container.Update(videodb://tvshows/titles/)</onclick>
-			<onclick condition="window.isactive(videos) + Skin.HasSetting(disableRecentTVShows)">control.setfocus(9204,0,absolute)</onclick>
+			<onclick condition="!window.isactive(videos) + !Skin.HasSetting(disableRecentTVShows)">
+				control.setfocus(9203,0,absolute)</onclick>
+			<onclick condition="window.isactive(videos) + !Skin.HasSetting(disableRecentTVShows)">
+				Container.Update(videodb://tvshows/titles/)</onclick>
+			<onclick condition="window.isactive(videos) + !Skin.HasSetting(disableRecentTVShows)">
+				control.setfocus(9203,0,absolute)</onclick>
+			<onclick condition="!window.isactive(videos) + Skin.HasSetting(disableRecentTVShows)">
+				ActivateWindow(Videos,videodb://tvshows/titles/)</onclick>
+			<onclick condition="!window.isactive(videos) + Skin.HasSetting(disableRecentTVShows)">
+				control.setfocus(9204,0,absolute)</onclick>
+			<onclick condition="window.isactive(videos) + Skin.HasSetting(disableRecentTVShows)">
+				Container.Update(videodb://tvshows/titles/)</onclick>
+			<onclick condition="window.isactive(videos) + Skin.HasSetting(disableRecentTVShows)">
+				control.setfocus(9204,0,absolute)</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">videosubmenu</property>
 			<property name="isSubmenu">True</property>
@@ -501,16 +386,24 @@
 			<property name="defaultID">132</property>
 			<visible>Library.HasContent(Music)</visible>
 			<onclick condition="true">control.setfocus(9999)</onclick>
-			<onclick condition="!window.isactive(music) + !Skin.HasSetting(disableRecentAlbums)">ActivateWindow(Music,musicdb://albums/)</onclick>
+			<onclick condition="!window.isactive(music) + !Skin.HasSetting(disableRecentAlbums)">
+				ActivateWindow(Music,musicdb://albums/)</onclick>
 			<property name="path">ActivateWindow(Music,musicdb://albums/)</property>
 			<property name="list">musicdb://albums/</property>
-			<onclick condition="!window.isactive(music) + !Skin.HasSetting(disableRecentAlbums)">control.setfocus(9998,0,absolute)</onclick>
-			<onclick condition="window.isactive(music) + !Skin.HasSetting(disableRecentAlbums)">Container.Update(musicdb://albums/)</onclick>
-			<onclick condition="window.isactive(music) + !Skin.HasSetting(disableRecentAlbums)">control.setfocus(9998,0,absolute)</onclick>
-			<onclick condition="!window.isactive(music) + Skin.HasSetting(disableRecentAlbums)">ActivateWindow(Music,musicdb://albums/)</onclick>
-			<onclick condition="!window.isactive(music) + Skin.HasSetting(disableRecentAlbums)">control.setfocus(9124,0,absolute)</onclick>
-			<onclick condition="window.isactive(music) + Skin.HasSetting(disableRecentAlbums)">Container.Update(musicdb://albums/)</onclick>
-			<onclick condition="window.isactive(music) + Skin.HasSetting(disableRecentAlbums)">control.setfocus(9124,0,absolute)</onclick>
+			<onclick condition="!window.isactive(music) + !Skin.HasSetting(disableRecentAlbums)">
+				control.setfocus(9998,0,absolute)</onclick>
+			<onclick condition="window.isactive(music) + !Skin.HasSetting(disableRecentAlbums)">
+				Container.Update(musicdb://albums/)</onclick>
+			<onclick condition="window.isactive(music) + !Skin.HasSetting(disableRecentAlbums)">
+				control.setfocus(9998,0,absolute)</onclick>
+			<onclick condition="!window.isactive(music) + Skin.HasSetting(disableRecentAlbums)">
+				ActivateWindow(Music,musicdb://albums/)</onclick>
+			<onclick condition="!window.isactive(music) + Skin.HasSetting(disableRecentAlbums)">
+				control.setfocus(9124,0,absolute)</onclick>
+			<onclick condition="window.isactive(music) + Skin.HasSetting(disableRecentAlbums)">
+				Container.Update(musicdb://albums/)</onclick>
+			<onclick condition="window.isactive(music) + Skin.HasSetting(disableRecentAlbums)">
+				control.setfocus(9124,0,absolute)</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">musicsubmenu</property>
 			<property name="isSubmenu">True</property>
@@ -562,10 +455,12 @@
 			<property name="defaultID">musicvideos</property>
 			<visible>Library.HasContent(MusicVideos)</visible>
 			<onclick condition="true">control.setfocus(9999)</onclick>
-			<onclick condition="window.isactive(music)">Container.Update(videodb://musicvideos/titles/)</onclick>
+			<onclick condition="window.isactive(music)">
+				Container.Update(videodb://musicvideos/titles/)</onclick>
 			<property name="path">Container.Update(videodb://musicvideos/titles/)</property>
 			<property name="list">Container.Update(videodb://musicvideos/titles/)</property>
-			<onclick condition="!window.isactive(music)">ActivateWindow(Videos,videodb://musicvideos/titles/)</onclick>
+			<onclick condition="!window.isactive(music)">
+				ActivateWindow(Videos,videodb://musicvideos/titles/)</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="group">musicsubmenu</property>
 			<property name="isSubmenu">True</property>
