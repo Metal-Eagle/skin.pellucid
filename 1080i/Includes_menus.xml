@@ -77,6 +77,7 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
+
 		<!-- Start Youtube -->
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
@@ -88,27 +89,28 @@
 			<onclick>StartAndroidActivity("com.google.android.youtube.tv")</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 		</item>
-		<!-- Turn on screensaver -->
-		<item id="6">
-			<property name="id">$NUMBER[6]</property>
-			<label>Black</label>
-			<icon>DefaultAddon.png</icon>
-			<thumb />
-			<property name="labelID">Black</property>
-			<property name="defaultID">Black</property>
-			<onclick>ActivateScreensaver()</onclick>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-		</item>
 
 		<!-- Turn on Spotify -->
-		<item id="7">
-			<property name="id">$NUMBER[7]</property>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
 			<label>Spotify</label>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
 			<property name="labelID">Spotify</property>
 			<property name="defaultID">Spotify</property>
 			<onclick>StartAndroidActivity("com.spotify.tv.android")</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+		</item>
+
+		<!-- Turn on screensaver -->
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<label>Black</label>
+			<icon>DefaultAddon.png</icon>
+			<thumb />
+			<property name="labelID">Black</property>
+			<property name="defaultID">Black</property>
+			<onclick>ActivateScreensaver()</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 		</item>
 
