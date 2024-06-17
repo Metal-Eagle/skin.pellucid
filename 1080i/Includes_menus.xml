@@ -100,6 +100,43 @@
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 		</item>
 
+		<!-- Turn on Spotify -->
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<label>Spotify</label>
+			<icon>DefaultAddon.png</icon>
+			<thumb />
+			<property name="labelID">Spotify</property>
+			<property name="defaultID">Spotify</property>
+			<onclick>StartAndroidActivity("com.spotify.tv.android")</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+		</item>
+
+		<!-- Update library -->
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<label>Update library</label>
+			<icon>DefaultAddon.png</icon>
+			<thumb />
+			<property name="labelID">Update library</property>
+			<property name="defaultID">Update library</property>
+			<onclick>UpdateLibrary(video)</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+		</item>
+
+		<!-- Cleanup library -->
+		<item id="8">
+			<property name="id">$NUMBER[8]</property>
+			<label>Cleanup library</label>
+			<icon>DefaultAddon.png</icon>
+			<thumb />
+			<property name="labelID">Cleanup library</property>
+			<property name="defaultID">Cleanup library</property>
+			<onclick>CleanLibrary(video)</onclick>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
+		</item>
+
+
 	</include>
 	<include name="menus-videomenu">
 		<item id="1">
