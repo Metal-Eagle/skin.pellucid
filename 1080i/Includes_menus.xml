@@ -89,16 +89,17 @@
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 		</item>
 		<!-- Turn on screensaver -->
-		<!-- <item id="6">
+		<item id="6">
 			<property name="id">$NUMBER[6]</property>
 			<label>Black</label>
 			<icon>DefaultAddon.png</icon>
 			<thumb />
 			<property name="labelID">Black</property>
 			<property name="defaultID">Black</property>
-			<onclick>ActivateWindow("screensaver")</onclick>
+			<onclick>ActivateScreensaver()</onclick>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-		</item> -->
+		</item>
+
 	</include>
 	<include name="menus-videomenu">
 		<item id="1">
